@@ -1,0 +1,24 @@
+in:
+  type: file
+  path_prefix: ./data.csv
+  parser:
+    charset: UTF-8
+    newline: CRLF
+    type: csv
+    delimiter: ','
+    quote: '"'
+    escape: ''
+    null_string: 'NULL'
+    header_line: true
+    columns:
+    - {name: date, type: timestamp, format: '%Y/%m/%d'}
+    - {name: account, type: double}
+
+out:
+  type: postgresql
+  host: localhost
+  user: postgres
+  password: postgres
+  database: postgres
+  table: temperature
+  mode: replace
