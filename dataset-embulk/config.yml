@@ -12,7 +12,7 @@ in:
     header_line: true
     columns:
     - {name: date, type: timestamp, format: '%Y/%m/%d'}
-    - {name: account, type: double}
+    - {name: temperature, type: double}
 
 out:
   type: postgresql
